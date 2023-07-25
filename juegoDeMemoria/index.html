@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header class="header">
+            <div class="atras">
+                <a href="../inicio.html"><img src="../imagenes/logo.png"></a>
+            </div>
+            <nav>
+                <ul class="nav_botonera">
+                    <li>
+                        <a href="#">Fondo</a>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="fondo1" onclick="cambiarFondo(this)">Fondo1</a></li>
+                            <li><a href="#" id="fondo2" onclick="cambiarFondo(this)">Fondo2</a></li>
+                            <li><a href="#" id="fondo3" onclick="cambiarFondo(this)">Fondo3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Background</a>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="back1" onclick="cambiarBackground(this)">Background1</a></li>
+                            <li>
+                                <a href="#" id="back2" onclick="cambiarBackground(this)">Background2</a>
+                                <ul class="botonera_sub-menu">
+                                    <li><a href="#">Background1</a></li>
+                                    <li><a href="#">Background2</a></li>
+                                    <li><a href="#">Background3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="back3" onclick="cambiarBackground(this)">Background3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main class="main">
+                <div class="juego">
+                    <div class="tablero" id="tablero"></div>
+
+                    <div class="bajo_juego">
+                        <button onclick="nuevoJuego()" class="nuevo-juego">NUEVO JUEGO</button>
+                        <div class="juego_resultado">
+                            <div class="contador">
+                                <!-- <p style="margin: 3px;">Correctas</p> -->
+                                <p id="contador" class="pnts dinamico"></p>
+                            </div>
+                            <div class="pares">
+                                <!-- <p style="margin: 3px;">Correctas</p> -->
+                                <p id="pares" class="pnts dinamico"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+    <script src="../menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <header class="header">
+            <div class="atras">
+                <a href="index.html"><img src="../imagenes/logo.png"></a>
+            </div>
+            <nav>
+                <ul class="nav_botonera">
+                    <li>
+                        <a href="#">Fondo</a>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="fondo1" onclick="cambiarFondo(this)">Fondo1</a></li>
+                            <li><a href="#" id="fondo2" onclick="cambiarFondo(this)">Fondo2</a></li>
+                            <li><a href="#" id="fondo3" onclick="cambiarFondo(this)">Fondo3</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- <li>
+                        <a href="#">Background</a>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="back1" onclick="cambiarBackground(this)">Background1</a></li>
+                            <li>
+                                <a href="#" id="back2" onclick="cambiarBackground(this)">Background2</a>
+                                <ul class="botonera_sub-menu">
+                                    <li><a href="#">Background1</a></li>
+                                    <li><a href="#">Background2</a></li>
+                                    <li><a href="#">Background3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="back3" onclick="cambiarBackground(this)">Background3</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="container_juego">
+                <div class="juego" id="tablero">
+
+                    <div class="juego_superior">
+                        <!-- BOTON MOSTRAR///CONTADOR///MENSAJES -->
+                        <div class="superior__unico">
+                            <p id="texto-superior" class="pnts superior__unico-texto"></p>
+                            <p id="contador" class="pnts superior__unico-contador"></p>
+                            <button class="boton_mostrar" onclick="mostrarPregunta()" id="boton-mostrar"
+                                autofocus>Empezar</button>
+                        </div>
+                    </div>
+
+                    <div class="juego_medio">
+                        <div class="pregunta">
+                            <p id="pregunta"></p>
+                        </div>
+                    </div>
+
+                    <div class="juego_inferior">
+                        <div class="volverA-jugar"><input type="button" id="btn-volverAjugar" class="btn-volverAjugar"
+                                value="Volver A Jugar" onclick="volverAjugar()"></div>
+
+                        <div id="juego-opciones" class="juego_opciones">
+                            <div class="inferior__unico">
+                                <div class="opcion1 opciones"><input type="button" id="opcion1"
+                                        onclick="obtenerValor(this)"></div>
+                                <div class="opcion2 opciones"><input type="button" id="opcion2"
+                                        onclick="obtenerValor(this)"></div>
+                                <div class="opcion3 opciones"><input type="button" id="opcion3"
+                                        onclick="obtenerValor(this)"></div>
+                                <div class="opcion4 opciones"><input type="button" id="opcion4"
+                                        onclick="obtenerValor(this)"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- RESULTADO/PUNTUACIONES -->
+                <div class="juego_resultado">
+                    <div class="resultado">
+                        <p style="margin: 3px;">Intentos</p>
+                        <p id="intentos" class="pnts dinamico" style="color: red;"></p>
+                    </div>
+                    <div class="sobra">
+                        <p style="margin: 3px;">Correctas</p>
+                        <p id="correctas" class="pnts dinamico" style="color: green;"></p>
+                    </div>
+
+                </div>
+                <!-- INTENTOS///PUNTOS -->
+                <!-- <div class="juego_puntos">
+                    <div class="mensaje">
+                        <p id="mensaje-inferior"></p>
+                    </div>
+                </div> -->
+
+            </div>
+        </main>
+        <div class="menu_opciones">
+            <a href="cargarPreguntas/cargarpregunta.html" class="btn_cargar-pregunta">CARGAR PREGUNTA</a>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="../menu.js"></script>
+</body>
+
+</html>

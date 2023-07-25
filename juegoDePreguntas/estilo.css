@@ -1,0 +1,353 @@
+
+.container_juego { 
+    margin: auto;
+    width: 70%;
+    display: flex;
+}
+
+.juego {
+    margin: auto;
+    width: 78%;
+ height: 70vh;
+    background-image: url(../imagenes/fondo1.jpg);
+    background-size: cover;
+    border-radius: 80px;
+    /* float: left; */
+    display: flex;
+    flex-direction: column;  
+}
+
+.juego > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juego_superior {
+    height: 20%;
+}
+
+.superior__unico {
+   width: auto;
+   text-align: center;
+}
+
+.juego_medio {
+    height: 30%;
+}
+
+.juego_medio > div {
+    width: auto;
+    text-align: center;
+}
+
+.juego_inferior {
+    height: 50%;
+}
+
+.juego_opciones {
+    width: 80%;
+    height: 50%;
+}
+
+.inferior__unico {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    /* display: none; */
+}
+
+.inferior__unico .opciones {
+    width: 100%;
+}
+
+.inferior__unico > div {
+   width: 48%;
+}
+
+/* .inferior__unico .opcion2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inferior__unico .opcion3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.inferior__unico .opcion4 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+} */
+
+/*RESULTADOS*/
+.juego_resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20%;
+    /* height: 500px; */
+    text-align: center;
+    font-size: 24px;
+    /* float: right; */
+}
+
+.juego_resultado > div {
+    /* border-bottom: 3px solid white;
+    border-radius: 10%; */
+    height: 100px;
+    color: rgba(240, 248, 255, 0.649);
+}
+
+
+/*PUNTOS///INTENTOS*/
+
+.juego_puntos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    height: 85px;
+    font-size: 24px;
+    text-align: center;
+    border-bottom: 3px solid white;
+    border-radius: 10%;  
+}
+
+
+
+/*/////////////////*/
+/* JUEGO/CONTENIDO */
+/*/////////////////*/
+
+/* .juego button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10%;
+    outline: none;
+    font-weight: 700;
+    background-color: transparent;
+    color: white;
+} */
+
+
+.juego_medio p {
+  font-size: 32px;
+}
+
+.superior__unico {
+    height: 100%;
+}
+
+.superior__unico button {
+    padding: 0 20px;
+    height: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10%;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    margin: auto;
+}
+
+.superior__unico-texto {
+    font-size: 50px;
+}
+
+.superior__unico-contador,
+.superior__unico-resultado {
+    font-size: 54px;
+    color: rgba(255, 255, 255, 0.521);
+    text-align: center;
+}
+
+
+
+
+.inferior__unico input {
+    /* display: inline-block; */
+    width: 100%;
+    height: 100%;
+    /* height: 50px; */
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10%;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+ }
+
+ .btn-volverAjugar {
+    width: 180px;
+    height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20%;
+    /* border-bottom: 3px solid white; */
+    background-color: transparent;
+    color: white;
+    outline: none;
+    box-shadow: 10px 10px 30px 10px;
+    margin: auto;
+    display: none;
+ }
+
+/*PUNTUACIONES*/
+.dinamico {
+    font-size: 50px;
+}
+
+.puntos__textos {
+    color: rgba(255, 255, 255, 0.521);
+}
+
+.mensaje{
+    font-size: 30px;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*MENU DERECHA*/
+
+.btn_cargar-pregunta {
+    text-decoration: none;
+    color: gray; 
+    font-size: 20px;
+}
+
+
+.menu_opciones {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* @media (min-width: 1000px) {
+    .juego {
+      float: left;
+    }
+  } */
+
+
+@media(max-width: 1000px) {    
+    .container_juego { 
+        width: 96%;
+        flex-direction: column;
+    }
+
+    .mensaje{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .juego {
+        width: 90%;
+    }
+
+    .juego_resultado {
+        margin-top: 20px;
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .juego_resultado > div {
+        border-bottom: none;
+        height: 50px;
+    }
+}
+
+@media(max-width: 600px) {
+    .juego { 
+        margin: auto;
+        margin-top: 10px;
+        width: 100%;
+        height: 75vh;
+        border-radius: 5%;
+    }
+
+    .juego_superior {
+        height: 10%;
+    }
+
+    .superior__unico-texto {
+        font-size: 30px;
+    }
+    
+    .superior__unico-contador,
+    .superior__unico-resultado {
+        font-size: 48px;
+    }
+    
+    .juego_medio {
+        height: 35%;
+    }
+
+
+
+
+
+    
+.inferior__unico input {
+font-size: 21px;
+ }
+
+    .juego_resultado {
+        width: 96%;
+    }
+
+    .juego_medio .pregunta p{
+        font-size: 24px;
+      }
+
+      .juego_opciones {
+        height: 100%;
+      }
+
+    .inferior__unico {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .inferior__unico > div {
+        height: 100%;
+    }
+
+    .opciones input{
+        font-size: 18px;
+    }
+
+
+    .juego_resultado > div {
+font-size: 20px;
+    }
+
+    .juego_resultado .dinamico{
+       font-size: 36px;
+    }
+
+    .menu_opciones {
+        width: 100%;
+        margin-top: 40px;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+
+}

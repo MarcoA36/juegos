@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="atras">
+            <a href="../index.html"><img src="img/flecha-atras.png"></a>
+        </div> 
+        <form class="form_cargar_pregunta">
+            <div class="cargar_pregunta">
+                <h3>Ingrese la pregunta</h3>
+                <input id="pregunta" placeholder="Cuál es la capital de Francia?"></input>
+            </div>
+
+
+            <div class="cargar_opciones">
+                <div class="opcion_correcta">
+                    <h3>Ingrese la respuesta correcta</h3>
+                    <input type="text" id="opcion1" name="opcion1" placeholder="Paris">
+                </div>
+
+                
+                <div class="opciones_incorrectas">
+                    <h3>Ingrese otras opciones</h3>
+                    <div>
+                        <!-- <label for="opcion2">Opción 2</label> -->
+                        <input type="text" id="opcion2" name="opcion2" placeholder="Madrid">
+                    </div>
+
+                    <div>
+                        <!-- <label for="opcion3">Opción 3</label> -->
+                        <input type="text" id="opcion3" name="opcion3" placeholder="Grecia">
+                    </div>
+
+                    <div>
+                        <!-- <label for="opcion4">Opción 4</label> -->
+                        <input type="text" id="opcion4" name="opcion4" placeholder="Buenos Aires">
+                    </div>
+
+                </div>
+            </div>
+            <div class="submit">
+                <p id="btn-cargar">Cargar</p>
+            </div>
+            <p id="mensaje-carga"></p>
+        </form>
+    </div>
+</body>
+<script src="cargar.js"></script>
+
+</html>

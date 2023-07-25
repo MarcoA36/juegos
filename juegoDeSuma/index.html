@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="../estilo.css">
+</head>
+
+<body class="body">
+
+        <header class="header">
+            <div class="atras">
+                <a href="index.html"><img src="../imagenes/logo.png"></a>
+            </div>
+            <nav>
+                <ul class="nav_botonera">
+                    <li>
+                        <p>Fondo</p>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="fondo1" onclick="cambiarFondo(this)">Fondo1</a></li>
+                            <li><a href="#" id="fondo2" onclick="cambiarFondo(this)">Fondo2</a></li>
+                            <li><a href="#" id="fondo3" onclick="cambiarFondo(this)">Fondo3</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <p>Background</p>
+                        <ul class="botonera_menu">
+                            <li><a href="#" id="back1" onclick="cambiarBackground(this)">Background1</a></li>
+                            <li>
+                                <a href="#" id="back2" onclick="cambiarBackground(this)">Background2</a>
+                                <ul class="botonera_sub-menu">
+                                    <li><a href="#">Background1</a></li>
+                                    <li><a href="#">Background2</a></li>
+                                    <li><a href="#">Background3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" id="back3" onclick="cambiarBackground(this)">Background3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            <div class="container_juego">
+                <div class="juego" id="tablero">
+
+                    <div class="juego_superior">
+                        <!-- BOTON MOSTRAR///CONTADOR///MENSAJES -->
+                        <div class="superior__unico">
+                            <p id="texto-superior" class="pnts superior__unico-texto"></p>
+                            <p id="texto-superior-resultado" class="pnts superior__unico-resultado"></p>
+                            <p id="contador" class="pnts superior__unico-contador"></p>
+                            <button class="boton_mostrar" onclick="mostrarNumeros()" id="boton-mostrar"
+                                autofocus>MOSTRAR
+                                NUMEROS</button>
+                        </div>
+                    </div>
+
+                    <div class="juego_medio">
+                        <div class="medio__izquierda">
+                            <p id="numeroUno" class="pnts numeros"></p>
+                        </div>
+                        <div class="medio__centro">
+                            <p id="operador" style="display: none;" class="numeros">+</p>
+                        </div>
+                        <div class="medio__derecha">
+                            <p id="numeroDos" class="pnts numeros"></p>
+                        </div>
+                    </div>
+                    <div class="juego_inferior">
+                        <div class="inferior__unico" id="input-boton">
+                            <input type="number" name="input" id="inputResultado" class="pnts" oninput="limitarDigitos(this, 4)">
+                            <button onclick="verificarResultado()" id="comprobar-btn">Comprobar</button>
+                            <button id="proxima-btn" style="display: none;" onclick="proxima()">Proxima</button>
+                            <button id="volverAjugar" style="display: none;" onclick="volverAjugar()">Volver a
+                                Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- RESULTADO///SOBRA///TOTAL -->
+                <div class="juego_resultado">
+                    <div class="resultado">
+                        <p style="margin: 3px;">Resultado</p>
+                        <p id="resultados" class="pnts dinamico" style="color: rgb(51, 255, 0);"></p>
+                    </div>
+                    <div class="sobra">
+                        <p style="margin: 3px;">Sobra</p>
+                        <p id="sobra" class="pnts dinamico" style="color: rgb(255, 0, 0);"></p>
+                    </div>
+                    <div class="total">
+                        <p style="margin: 3px; color:rgba(255, 255, 255, 0.521);">Total</p>
+                        <p id="sobra-total" class="pnts dinamico" style="margin: 0; color: rgb(219, 182, 114);"></p>
+                    </div>
+                </div>
+                <!-- INTENTOS///PUNTOS -->
+                <div class="juego_puntos">
+                    <div class="intentos">
+                        <p class="puntos__textos">intentos</p>
+                        <p id="intentos" class="pnts dinamico" style="color: rgb(255, 0, 0);"></p>
+                    </div>
+                    <div class="puntos">
+                        <p class="puntos__textos">puntos</p>
+                        <p id="puntos" class="pnts dinamico" style="color: rgb(33, 89, 243);"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- <aside class="aside">
+            <div class="seteos">
+                <div class="set-intentos">
+                    <p>intentos</p>
+                    <input type="text" id="set-intentos" placeholder="10" maxlength="2">
+                </div>
+                <div class="set-tiempo">
+                    <p>tiempo</p>
+                    <input type="text" id="set-tiempo" placeholder="6" maxlength="2">
+                </div>
+                <div class="set-nivel">
+                    <p>Nivel</p>
+                    <select id="set-nivel" onchange="cambiarNivel()">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="set-botones">
+                    <button id="guardar-seteo" onclick="seteoUsuario()">GUARDAR</button>
+                    <button id="resetear-seteo" onclick="resetearSeteo()">RESETEAR</button>
+                </div>
+
+            </div>
+        </aside> -->
+    <script src="main.js"></script>
+    <script src="../menu.js"></script>
+</body>
+
+</html>
